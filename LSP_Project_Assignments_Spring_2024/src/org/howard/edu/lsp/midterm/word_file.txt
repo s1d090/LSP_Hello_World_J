@@ -1,0 +1,330 @@
+Howard University
+College of Engineering and Architecture
+Department of Electrical Engineering & Computer Science
+
+Large Scale / Object-Oriented Programming
+
+
+
+Midterm Exam – Part I
+March 14, 2024
+
+
+
+
+Name	:_____________Siddhartha Gautam_________________
+
+
+This exam is two parts:
+Part I:		70 pts. (T/F, multiple choice, essays)
+Part II:	30 pts. (programming)
+
+
+
+
+
+
+
+Instructions:
+
+Please return this exam in Word format, do not convert to pdf.
+Submit completed exam to your github repository.  Create package:
+org.howard.edu.lsp.midterm
+Verify that the commit completed successfully
+
+OPEN BOOK, OPEN NOTES.  THERE IS NO COLLABORATION ON THIS EXAM
+
+
+
+
+
+
+
+
+
+
+
+
+
+Section 1: True/False.  Highlight or write your answer. Each question is 1 pt.
+
+1.True- The ability to hide the implementation details of an object is called encapsulation
+2.False- Java code is a compiled language that creates binary code for a specific architecture and must be recompiled when moved to another machine
+3.False- Polymorphism works in Java because method calls are bound to their method definitions at compile time
+4.False- Every object in Java explicitly derives from class Object using extends.
+5.False- A class in Java may implement only one interface 
+6.True- In Java, when an instance of a class, or object, is specified as a parameter to a method, a reference to the said object is passed to the method
+7.False- When designing a class, conceptually, each class should be designed to have multiple goals so that your overall design can have less classes
+8.False- In Java, it is impossible to have memory leaks because of garbage collection 
+9.False- A Java class can extend from multiple classes
+10.True- Testing does not ensure that our programs will never have any bugs
+11.False- According to principles of encapsulation, instance variables should always be declared as public
+12.False- Google naming conventions recommend that a Java class should begin with a lowercase letter and methods with an uppercase letter
+13.True- A subclass can add behavior that is not present in the superclass.
+14.True- If B is a subclass of A, then a B object may always be assigned to a variable of type A
+15.True- If class A extends class B, class A is a subclass of B and B is a superclass of A 
+16.False- A constructor can be invoked multiple times once an object is instantiated
+17.True- A checked exception represents an error that a program has to handle
+18.False- In Java, the this keyword can be used to refer to both the current instance of the class and other instances of the class within the same scope
+19.False- Methods are said to be overridden if they are in the same scope and have the same names but different signatures
+20.False- A method that overrides another must have the same name but a different signature
+21.False- A static method can refer to any instance variable of the class
+22.False- Refactoring code involves changing the functionality of the code without modifying its external behavior
+23.True- A Java method returns void if it does not return a value
+24.False- An ArrayList in Java will not automatically change its size as needed. 
+25.False Polymorphism works in Java because method calls are bound to their method definitions at compile time.
+
+
+
+
+
+Section 2: Multiple Choice, type answer below each question.  Each question is 1 pt.
+
+Which of the following is also known as run-time binding or late binding?
+Dynamic typing
+Dynamic loading
+Dynamic binding - This is correct
+Data hiding
+
+Which principle suggests that each module should perform a single, well-defined task?
+High Cohesion- This is correct
+Low Coupling 
+Stepwise Refinement
+Information Hiding
+
+A good design should strive for: 
+a tight cohesion and a tight coupling between modules
+a tight cohesion and a loose coupling between modules - This is correct
+a loose cohesion and a tight coupling between modules
+a loose cohesion and a loose coupling between modules
+
+Which of the following is true about composition in object-oriented programming? 
+It is a form of inheritance. 
+It allows objects to inherit properties and behaviors from another class. 
+It is a way of creating complex objects by combining simpler ones. - This is correct
+It is used to hide the implementation details of a class.
+
+In Java, when can the garbage collector collect the memory allocated to an object?
+when it can prove that there is no reference to that object from any other object- This is correct(Option a)
+when the reference initialized with “new” goes out of scope
+when the method in which the object was created returns
+only when the program terminates
+never, java puts the responsibility on developers to deallocate the memory programmatically.
+
+What is the purpose of the Single Responsibility Principle (SRP) in object-oriented design?
+To ensure that each class has only one method 
+To ensure that each class has only one instance variable 
+To ensure that each class has only one responsibility and reason to change- This is correct(Option c)
+To ensure that each class has only one constructor
+
+
+
+
+
+What is an abstract class?
+A class that has direct instances, but whose descendants may have direct instances
+A class that has direct instances, but whose descendants may not have direct instances
+A class that has no direct instances, but whose descendants may have direct instances-(This is correct-Option(c))
+All of the mentioned
+
+What is true about “has-a” and “is-a” relationships? (Choose two) 
+instance variables can be used when creating a has-a relationship-This is correct
+inheritance represents an is-a relationship-This is correct
+inheritance represents a has-a relationship
+instances must be used when creating a has-a relationship 
+
+How does Arthur Riel's principle of "information hiding" contribute to better software design?
+By minimizing the dependencies between modules
+By encapsulating the implementation details of a module-This is correct
+By ensuring that each module has only one responsibility 
+By maximizing cohesion within modules
+
+According to Arthur Riel's design principles, what should be the relationship between modules in a well-designed system?
+Modules should be tightly coupled to each other
+Modules should be loosely coupled to each other- This is correct
+Modules should have low cohesion
+Modules should be independent of each other
+
+Which principle suggests that each module should perform a single, well-defined task?
+High Cohesion- This is correct
+Low Coupling
+Stepwise Refinement
+Information Hiding
+
+What principle suggests that subclasses should be substitutable for their base classes without affecting the correctness of the program?
+Open/Closed Principle
+Liskov Substitution Principle - This is correct
+Single Responsibility Principle
+Interface Segregation Principle
+
+
+
+
+
+
+What is the primary purpose of inheritance in object-oriented programming according to Arthur Riel's principles?
+To increase the complexity of the software system
+To promote code reuse and minimize redundancy- This is correct
+To encourage tight coupling between classes
+To decrease the number of classes in the system
+
+Given the following.  What is true?  
+
+public class Room { 
+public int roomNr; 
+private Date beginDtm; 
+private Date endDttm; 
+
+public void book(int roomNr, Date beginDttm, Date endDttm) { 
+    	    this.roomNr = roomNr;     	    this.beginDtm = beginDttm;     	    this.endDttm = endDttm; 
+} 
+  } 
+
+the code demonstrates polymorphism
+the class is fully encapsulated
+the variable roomNr breaks encapsulation - True
+variables beginDttm and endDttm break polymorphism 
+the method book breaks encapsulation
+
+What can directly access and change the value of the variable roomNr?
+package com.mycompany; 
+
+public class Hotel { 
+    protected int roomNr = 100; 
+} 
+
+only the Hotel class
+any class
+any class in com.mycompany package 
+any class that extends Hotel - This is correct
+
+What is the output of the following?
+public class Example {
+    public static void main(String[] args) {
+        String str1 = "hello";
+        String str2 = new String("hello");
+        System.out.println(str1 == str2);
+    }
+}
+true 
+false - This is correct
+Compilation Error
+Runtime Error
+
+Which of the following statements is incorrect in Java?
+public members of a class can be accessed by any other class
+private members of a class can be inherited by a sub class, and become protected members in sub class- This statement is incorrect(right option)
+protected members of a class can be accessed by any class in the same package 
+private members of a class can only be accessed by members of that same class it was declared
+
+Which of the following allow us to define an IS-A relationship in Java? Circle all that apply.
+interfaces 
+Classes- This is correct
+local variables
+dynamic binding
+none of the above
+
+Which of these can be overloaded? (choose one or more answers)
+methods - This option
+Constructors- This option
+classes
+interfaces
+
+Given:
+public interface Jumper { public void jump(); }
+public class Animal { }
+public class Dog extends Animal { protected Tail tail; }
+public class Beagle extends Dog implements Jumper {
+public void jump() {};
+} 
+public class Cat implements Jumper { public void jump(); }
+
+Which of the following are true?
+Cat is-a Animal
+Cat is-a Jumper - True
+Dog is-a Animal - True
+Dog is-a Jumper
+Cat has-a Animal
+Beagle has-a Tail - True
+Beagle has-a Jumper
+
+Which of the following statements is true about checked exceptions in Java?
+They must be caught or declared in the method signature using the “throws” clause - This is true(Option A)
+They are subclasses of RuntimeException
+They occur at runtime
+They do not need to be handled explicitly.
+
+
+What happens if an exception is thrown within a “try” block but is not caught by any “catch” block?
+The program continues to execute normally
+The program crashes with  a runtime error
+The “finally” block is executed- This is correct
+The exception is automatically caught by the JVM
+
+A team manager needs data about the changes that have taken place for AWS resources in his account during the past two weeks. Which AWS service can help get this data?
+AWS Config - This is correct
+ClouldWatch
+Amazon Inspector
+AWS Cloud Trail
+
+A company wants to establish a private, dedicated connection between AWS and its on-premises data center. Which AWS service is the right choice for this requirement?
+Amazon CloudFront
+Amazon API Gateway
+AWS Direct Connect - This is correct
+AWS Site-to-Site VPN
+
+Which of the following will help you control the incoming traffic to an Amazon EC2 instance?
+Network access control list (network ACL)
+Security Group - This is correct
+Route Table
+AWS Resource Group
+
+Which of the following statements is true about interfaces in Java?
+Interfaces can have constructors
+A class can implement multiple interfaces- This is correct
+Interfaces can contain method implementations
+Interfaces cannot contain constants
+
+A company is looking at real-time processing of streaming big data for their ad-tech platform. Which of the following AWS services is the right choice for this requirement?
+Amazons Simple Queue Service (SQS)
+Amazon Redshift
+Amazon Kinesis Data Streams - This is correct
+Amazon EMR
+
+
+
+An e-commerce application sends out messages to a downstream application whenever an order is created. The downstream application processes the messages and updates its own systems. Currently, the two applications directly communicate with each other. Which service will you use to decouple this architecture, without any communication loss between the two systems?
+Amazon Kinesis Data Streams
+Amazon Simple Queue Service (SQS) - This is correct
+AWS Lambda
+Amazon Simple Notification Service (SNS)
+
+Which of the following AWS services will help provision a logically isolated network for your AWS resources?
+Amazon Virtual Private Cloud (Amazon VPC) - This is correct
+AWS PrivateLink
+Amazon Route 53
+AWS Firewall Manager
+
+Which of the following are the security best practices suggested by AWS for Identity and Access Management (IAM)? (Select two)
+Enable AWS Multi-factor Authentication (AWS MFA) on your AWS root account.  MFA helps give root access to multiple users without actually sharing the root login credentials
+Do not change passwords and access keys once created.  This results in a failure of connectivity in the application logic
+Do not share security credentials between accounts, use IAM roles instead-This is correct
+When you create IAM policies, grant the least privileges required to perform a task- This is correct
+Share your AWS account root user credentials only if absolutely necessary for performing an  important billing operation
+
+Section 3: Short essay questions.  Please limit your responses to a few sentences.
+
+1. You are writing an external service that a client program attempts to connect to.  What type of exception (check or unchecked) do you believe we should use when the client program provides an invalid web address?  Explain why.
+(5 pts.)
+Ans: When a client program gives a invalid web address, it's better to use a checked exception. This is because the wrong address is a mistake that the client can fix, and the program can try to work around. By using a checked exception, we make sure the client deals with this mistake, helping make the software stronger and more reliable. Checked exceptions provide a clear contract between the service and the client, ensuring that potential errors are not overlooked.
+
+Java programs are said to be write once, run anywhere.  Please explain this statement.
+(5 pts.)
+
+Ans: The idea of "write once, run anywhere" is like writing a letter that anyone can read, no matter where they are. In Java, we write our program just one time, and then we can run it on any device that has Java installed. This works because Java code is compiled into bytecode, which is platform-independent and can run on any device equipped with a Java Virtual Machine (JVM). This design allows developers to write their application code once and then deploy it across multiple platforms without needing to recompile for each one.We don't have to change our program for different computers or phones: It just works everywhere Java is.
+
+
+3.Explain the difference between abstract classes and interfaces in object-oriented programming. Discuss when it is appropriate to use each construct and the implications for code design.
+(5 pts.)
+
+Ans: Abstract classes and interfaces are both constructs in object-oriented programming that help in designing flexible and modular code, but they serve different purposes and have different use cases. An abstract class is used when we want to define a template for a group of related classes, including some shared implementation. It allows us to define both abstract methods (without implementation) and concrete methods (with implementation). An interface, on the other hand , is purely a contract that specifies what methods a class must implement without providing any implementation details. It is appropriate to use an interface when you want to specify a common set of behaviors that can be adopted by classes from potentially diverse hierarchies.
