@@ -1,22 +1,22 @@
 package org.howard.edu.lsp.midterm.question2;
 
 public class IntegerRange implements Range {
-    private int lowerBound;
-    private int upperBound;
+    private int lowerBound; //lower boundary of the range
+    private int upperBound; //upper boundary of the range
 
-    // Constructor
+    // Constructing an IntegerRange with specified lower and upper bounds
     public IntegerRange(int lower, int upper) {
         this.lowerBound = lower;
         this.upperBound = upper;
     }
 
-    // Checks if the range contains the given value
+    // checking if the range contains the given value
     @Override
     public boolean contains(int value) {
         return value >= lowerBound && value <= upperBound;
     }
 
-    // Checks if this range overlaps with another range
+    // Checking if this given range overlaps with another range
     @Override
     public boolean overlaps(Range other) {
         if (other instanceof IntegerRange) {
